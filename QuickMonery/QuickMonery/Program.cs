@@ -15,7 +15,7 @@ namespace QuickMonery
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new QuickMonery());
+            Application.Run(new SystemManagerFrm());
         }
     }
 }

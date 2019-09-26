@@ -7,3 +7,12 @@ F:\work\jiutian\QuickMoney\QuickMonery\QuickMonery\obj\Debug\QuickMonery.QuickMo
 F:\work\jiutian\QuickMoney\QuickMonery\QuickMonery\obj\Debug\QuickMonery.csproj.GenerateResource.Cache
 F:\work\jiutian\QuickMoney\QuickMonery\QuickMonery\obj\Debug\QuickMonery.exe
 F:\work\jiutian\QuickMoney\QuickMonery\QuickMonery\obj\Debug\QuickMonery.pdb
+D:\Work\PoolOfThree\Project\QuickMoney\QuickMonery\QuickMonery\obj\Debug\QuickMonery.exe
+D:\Work\PoolOfThree\Project\QuickMoney\QuickMonery\QuickMonery\obj\Debug\QuickMonery.pdb
+D:\Work\PoolOfThree\Project\QuickMoney\QuickMonery\QuickMonery\bin\Debug\QuickMonery.exe
+D:\Work\PoolOfThree\Project\QuickMoney\QuickMonery\QuickMonery\bin\Debug\QuickMonery.pdb
+D:\Work\PoolOfThree\Project\QuickMoney\QuickMonery\QuickMonery\obj\Debug\QuickMonery.LoginFrm.resources
+D:\Work\PoolOfThree\Project\QuickMoney\QuickMonery\QuickMonery\obj\Debug\QuickMonery.Properties.Resources.resources
+D:\Work\PoolOfThree\Project\QuickMoney\QuickMonery\QuickMonery\obj\Debug\QuickMonery.QuickMonery.resources
+D:\Work\PoolOfThree\Project\QuickMoney\QuickMonery\QuickMonery\obj\Debug\QuickMonery.csproj.GenerateResource.Cache
+D:\Work\PoolOfThree\Project\QuickMoney\QuickMonery\QuickMonery\obj\Debug\QuickMonery.SystemManagerFrm.resources
