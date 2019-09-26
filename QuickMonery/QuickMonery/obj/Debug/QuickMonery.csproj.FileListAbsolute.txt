@@ -1,0 +1,9 @@
+F:\work\jiutian\QuickMoney\QuickMonery\QuickMonery\bin\Debug\QuickMonery.exe
+F:\work\jiutian\QuickMoney\QuickMonery\QuickMonery\bin\Debug\QuickMonery.pdb
+F:\work\jiutian\QuickMoney\QuickMonery\QuickMonery\obj\Debug\QuickMonery.csprojResolveAssemblyReference.cache
+F:\work\jiutian\QuickMoney\QuickMonery\QuickMonery\obj\Debug\QuickMonery.LoginFrm.resources
+F:\work\jiutian\QuickMoney\QuickMonery\QuickMonery\obj\Debug\QuickMonery.Properties.Resources.resources
+F:\work\jiutian\QuickMoney\QuickMonery\QuickMonery\obj\Debug\QuickMonery.QuickMonery.resources
+F:\work\jiutian\QuickMoney\QuickMonery\QuickMonery\obj\Debug\QuickMonery.csproj.GenerateResource.Cache
+F:\work\jiutian\QuickMoney\QuickMonery\QuickMonery\obj\Debug\QuickMonery.exe
+F:\work\jiutian\QuickMoney\QuickMonery\QuickMonery\obj\Debug\QuickMonery.pdb

@@ -14,6 +14,12 @@ namespace QuickMonery
         public QuickMonery()
         {
             InitializeComponent();
+            InitView();
+        }
+
+        private void InitView()
+        {
+           
         }
     }
 }

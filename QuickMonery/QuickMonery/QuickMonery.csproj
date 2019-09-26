@@ -96,7 +96,23 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Image\icon_cashier_press%402x.png" />
+    <Content Include="Image\icon_cashier_press.png" />
+    <Content Include="Image\icon_forms%402x.png" />
+    <Content Include="Image\icon_forms.png" />
+    <Content Include="Image\icon_pool%402x.png" />
+    <Content Include="Image\icon_pool.png" />
+    <Content Include="Image\icon__chat-collect.png" />
     <Content Include="Image\login_log.png" />
+    <Content Include="Image\pav_icon_weixin%402x.png" />
+    <Content Include="Image\pav_icon_weixin.png" />
+    <Content Include="Image\pav_icon_yikatong%402x.png" />
+    <Content Include="Image\pav_icon_yikatong.png" />
+    <Content Include="Image\pav_icon_yunshanfu%402x.png" />
+    <Content Include="Image\pav_icon_yunshanfu.png" />
+    <Content Include="Image\pav_icon_zhifubao%402x.png" />
+    <Content Include="Image\pav_icon_zhifubao.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
