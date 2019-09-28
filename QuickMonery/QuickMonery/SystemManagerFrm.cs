@@ -16,6 +16,7 @@ namespace QuickMonery
     public partial class SystemManagerFrm : Form
     {
         #region 属    性
+        MainFrm _frm;
         //设置类型  0=打印机 1=日志管理 2=快捷键 3=关于
         private int SetType = 0;
         //标题集合
@@ -26,8 +27,9 @@ namespace QuickMonery
         private IniFile iniClass;
         #endregion
 
-        public SystemManagerFrm()
+        public SystemManagerFrm(MainFrm frm)
         {
+            _frm = frm;
             InitializeComponent();
         }
 
