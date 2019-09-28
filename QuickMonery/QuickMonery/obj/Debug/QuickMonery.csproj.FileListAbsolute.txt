@@ -34,3 +34,10 @@ E:\PartWork\QuickMoney\QuickMonery\QuickMonery\bin\Debug\QuickMonery.Common.pdb
 E:\PartWork\QuickMoney\QuickMonery\QuickMonery\obj\Debug\QuickMonery.csproj.CopyComplete
 E:\PartWork\QuickMoney\QuickMonery\QuickMonery\bin\Debug\Newtonsoft.Json.dll
 E:\PartWork\QuickMoney\QuickMonery\QuickMonery\bin\Debug\Newtonsoft.Json.xml
+D:\Work\PoolOfThree\Project\QuickMoney\QuickMonery\QuickMonery\bin\Debug\QuickMonery.Common.dll
+D:\Work\PoolOfThree\Project\QuickMoney\QuickMonery\QuickMonery\bin\Debug\Newtonsoft.Json.dll
+D:\Work\PoolOfThree\Project\QuickMoney\QuickMonery\QuickMonery\bin\Debug\QuickMonery.Common.pdb
+D:\Work\PoolOfThree\Project\QuickMoney\QuickMonery\QuickMonery\bin\Debug\Newtonsoft.Json.xml
+D:\Work\PoolOfThree\Project\QuickMoney\QuickMonery\QuickMonery\obj\Debug\QuickMonery.csprojResolveAssemblyReference.cache
+D:\Work\PoolOfThree\Project\QuickMoney\QuickMonery\QuickMonery\obj\Debug\QuickMonery.TestMonery.resources
+D:\Work\PoolOfThree\Project\QuickMoney\QuickMonery\QuickMonery\obj\Debug\QuickMonery.TestSystem.resources

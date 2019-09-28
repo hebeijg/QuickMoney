@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomControl\MyDropDown.cs" />
     <Compile Include="KeyboardHook.cs" />
     <Compile Include="LoginFrm.cs">
       <SubType>Form</SubType>
@@ -119,6 +120,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Image\icon_arrow_down.png" />
     <Content Include="Image\icon_cashier_press%402x.png" />
     <Content Include="Image\icon_cashier_press.png" />
     <Content Include="Image\icon_forms%402x.png" />
@@ -135,14 +137,19 @@
     <Content Include="Image\pav_icon_yunshanfu.png" />
     <Content Include="Image\pav_icon_zhifubao%402x.png" />
     <Content Include="Image\pav_icon_zhifubao.png" />
+    <Content Include="Image\pub_combox_bg.png" />
+    <Content Include="Image\pub_lbl_bg.png" />
     <Content Include="Image\sys_icon_about.png" />
     <Content Include="Image\sys_icon_about_press.png" />
     <Content Include="Image\sys_icon_data.png" />
     <Content Include="Image\sys_icon_data_press.png" />
     <Content Include="Image\sys_icon_keyboard.png" />
     <Content Include="Image\sys_icon_keyboard_press.png" />
+    <Content Include="Image\sys_icon_off.png" />
+    <Content Include="Image\sys_icon_on.png" />
     <Content Include="Image\sys_icon_print.png" />
     <Content Include="Image\sys_icon_print_press.png" />
+    <Content Include="Image\sys_icon_set.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\QuickMonery.Common\QuickMonery.Common.csproj">
