@@ -9,3 +9,9 @@ D:\Work\PoolOfThree\Project\QuickMoney\QuickMonery\QuickMonery.Common\bin\Debug\
 D:\Work\PoolOfThree\Project\QuickMoney\QuickMonery\QuickMonery.Common\obj\Debug\QuickMonery.Common.csprojResolveAssemblyReference.cache
 D:\Work\PoolOfThree\Project\QuickMoney\QuickMonery\QuickMonery.Common\obj\Debug\QuickMonery.Common.dll
 D:\Work\PoolOfThree\Project\QuickMoney\QuickMonery\QuickMonery.Common\obj\Debug\QuickMonery.Common.pdb
+E:\PartWork\QuickMoney\QuickMonery\QuickMonery.Common\bin\Debug\QuickMonery.Common.dll
+E:\PartWork\QuickMoney\QuickMonery\QuickMonery.Common\bin\Debug\QuickMonery.Common.pdb
+E:\PartWork\QuickMoney\QuickMonery\QuickMonery.Common\obj\Debug\QuickMonery.Common.csprojAssemblyReference.cache
+E:\PartWork\QuickMoney\QuickMonery\QuickMonery.Common\obj\Debug\QuickMonery.Common.csproj.CoreCompileInputs.cache
+E:\PartWork\QuickMoney\QuickMonery\QuickMonery.Common\obj\Debug\QuickMonery.Common.dll
+E:\PartWork\QuickMoney\QuickMonery\QuickMonery.Common\obj\Debug\QuickMonery.Common.pdb
