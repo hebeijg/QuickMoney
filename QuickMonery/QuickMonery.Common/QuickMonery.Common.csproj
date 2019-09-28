@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HttpHelper.cs" />
     <Compile Include="IniFile.cs" />
     <Compile Include="LogInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
