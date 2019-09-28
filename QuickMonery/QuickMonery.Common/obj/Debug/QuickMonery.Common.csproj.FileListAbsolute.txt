@@ -15,3 +15,6 @@ E:\PartWork\QuickMoney\QuickMonery\QuickMonery.Common\obj\Debug\QuickMonery.Comm
 E:\PartWork\QuickMoney\QuickMonery\QuickMonery.Common\obj\Debug\QuickMonery.Common.csproj.CoreCompileInputs.cache
 E:\PartWork\QuickMoney\QuickMonery\QuickMonery.Common\obj\Debug\QuickMonery.Common.dll
 E:\PartWork\QuickMoney\QuickMonery\QuickMonery.Common\obj\Debug\QuickMonery.Common.pdb
+E:\PartWork\QuickMoney\QuickMonery\QuickMonery.Common\bin\Debug\Newtonsoft.Json.dll
+E:\PartWork\QuickMoney\QuickMonery\QuickMonery.Common\bin\Debug\Newtonsoft.Json.xml
+E:\PartWork\QuickMoney\QuickMonery\QuickMonery.Common\obj\Debug\QuickMonery.Common.csproj.CopyComplete
