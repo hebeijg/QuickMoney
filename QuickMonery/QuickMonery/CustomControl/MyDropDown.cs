@@ -49,7 +49,11 @@ namespace QuickMonery.CustomControl
             com_Box.FlatStyle = FlatStyle.Flat; com_Box.DropDownStyle = ComboBoxStyle.DropDownList;
             com_Box.FormattingEnabled = true;
             com_Box.TextChanged += new System.EventHandler(ComboBox_TextChanged);
-            com_Box.Items.AddRange(Items);            
+            com_Box.Items.AddRange(Items);
+
+            //com_Box.DrawMode = DrawMode.OwnerDrawVariable;//必须在这里设置模式，不然没有效果
+            //com_Box.DrawItem += new DrawItemEventHandler(beautifulCombo_DrawItem);
+        
             mainbox.Controls.Add(com_Box);
             //遮盖
             Panel delbox = new Panel();
@@ -84,6 +88,37 @@ namespace QuickMonery.CustomControl
         {
             lab_value.Tag = lab_value.Text = SelectItem_Pub = com_Box.Text;
             tool_Tip.SetToolTip(lab_value, com_Box.Text);
+        }
+
+        private void beautifulCombo_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            Rectangle r = e.Bounds;
+            r.Height = 40;
+            //Size imgsize = imageList1.ImageSize;
+            FontDialog fd = new FontDialog();
+            Font fs = fd.Font;
+            if (e.Index >= 0)
+            {
+                string temp = (string)com_Box.Items[e.Index];
+                StringFormat sf = new StringFormat();
+                sf.Alignment = StringAlignment.Near;
+                if (e.State == (DrawItemState.NoAccelerator | DrawItemState.NoFocusRect))
+                {
+                    e.Graphics.FillRectangle(new SolidBrush(System.Drawing.Color.FromArgb(255, 255, 255)),r);
+               
+                    //imageList1.Draw(e.Graphics, r.Left, r.Top, e.Index);
+                    e.Graphics.DrawString(temp, fs, new SolidBrush(System.Drawing.Color.FromArgb(102, 102, 102)), r.Left, r.Top);
+                    e.DrawFocusRectangle();
+                }
+                else
+                {
+                    e.Graphics.FillRectangle(new SolidBrush(System.Drawing.Color.FromArgb(255, 255, 255)), r);
+                    //imageList1.Draw(g, r.Left, r.Top, e.Index);
+                    e.Graphics.DrawString(temp, fs, new SolidBrush(System.Drawing.Color.FromArgb(80, 144, 255)), r.Left, r.Top);
+                    e.DrawFocusRectangle();
+                }
+            }
         }
     }
 }

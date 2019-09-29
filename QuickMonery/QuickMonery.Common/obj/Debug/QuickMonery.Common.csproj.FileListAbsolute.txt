@@ -19,3 +19,4 @@ E:\PartWork\QuickMoney\QuickMonery\QuickMonery.Common\bin\Debug\Newtonsoft.Json.
 E:\PartWork\QuickMoney\QuickMonery\QuickMonery.Common\obj\Debug\QuickMonery.Common.csproj.CopyComplete
 D:\Work\PoolOfThree\Project\QuickMoney\QuickMonery\QuickMonery.Common\bin\Debug\Newtonsoft.Json.dll
 D:\Work\PoolOfThree\Project\QuickMoney\QuickMonery\QuickMonery.Common\bin\Debug\Newtonsoft.Json.xml
+D:\Work\PoolOfThree\Project\QuickMoney\QuickMonery\QuickMonery.Common\obj\Debug\QuickMonery.Common.csprojResolveAssemblyReference.cache

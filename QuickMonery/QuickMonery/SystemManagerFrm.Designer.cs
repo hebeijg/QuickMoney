@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SystemManagerFrm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTitle = new System.Windows.Forms.Label();
             this.flpLeft = new System.Windows.Forms.FlowLayoutPanel();
             this.palLeftPrint = new System.Windows.Forms.Panel();
@@ -47,6 +47,7 @@
             this.lblLeftAbout = new System.Windows.Forms.Label();
             this.lblExitSettings = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_About = new System.Windows.Forms.Label();
             this.pal_Hotkey_Box = new System.Windows.Forms.Panel();
             this.pal_Hotkey_Restart = new System.Windows.Forms.Panel();
             this.tb_Hotkey_Restart = new System.Windows.Forms.TextBox();
@@ -62,14 +63,15 @@
             this.lbl_Hotkey_Report = new System.Windows.Forms.Label();
             this.lbl_Hotkey_Sow = new System.Windows.Forms.Label();
             this.pal_Log_Box = new System.Windows.Forms.Panel();
+            this.pal_Log_Line = new System.Windows.Forms.Panel();
             this.flp_G = new System.Windows.Forms.FlowLayoutPanel();
             this.dgv_Log = new System.Windows.Forms.DataGridView();
             this.RowsC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FileName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FullNameV = new System.Windows.Forms.DataGridViewLinkColumn();
             this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_Log_TranLog = new System.Windows.Forms.Label();
+            this.lbl_Log_AppLog = new System.Windows.Forms.Label();
             this.pal_Print_Box = new System.Windows.Forms.Panel();
             this.ptb_Print_Set = new System.Windows.Forms.PictureBox();
             this.ptb_Print_IsOpen = new System.Windows.Forms.PictureBox();
@@ -79,7 +81,6 @@
             this.lblCtTitle = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.lbl_About = new System.Windows.Forms.Label();
             this.flpLeft.SuspendLayout();
             this.palLeftPrint.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLeftPrint)).BeginInit();
@@ -298,6 +299,21 @@
             this.panel1.Size = new System.Drawing.Size(598, 610);
             this.panel1.TabIndex = 6;
             // 
+            // lbl_About
+            // 
+            this.lbl_About.AutoSize = true;
+            this.lbl_About.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_About.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_About.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_About.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.lbl_About.Location = new System.Drawing.Point(247, 22);
+            this.lbl_About.Name = "lbl_About";
+            this.lbl_About.Size = new System.Drawing.Size(16, 24);
+            this.lbl_About.TabIndex = 9;
+            this.lbl_About.Tag = "0";
+            this.lbl_About.Text = ".";
+            this.lbl_About.Visible = false;
+            // 
             // pal_Hotkey_Box
             // 
             this.pal_Hotkey_Box.Controls.Add(this.pal_Hotkey_Restart);
@@ -309,7 +325,7 @@
             this.pal_Hotkey_Box.Controls.Add(this.ptb_Hotkey_Set);
             this.pal_Hotkey_Box.Controls.Add(this.lbl_Hotkey_Report);
             this.pal_Hotkey_Box.Controls.Add(this.lbl_Hotkey_Sow);
-            this.pal_Hotkey_Box.Location = new System.Drawing.Point(48, 129);
+            this.pal_Hotkey_Box.Location = new System.Drawing.Point(48, 440);
             this.pal_Hotkey_Box.Name = "pal_Hotkey_Box";
             this.pal_Hotkey_Box.Size = new System.Drawing.Size(517, 34);
             this.pal_Hotkey_Box.TabIndex = 8;
@@ -468,14 +484,24 @@
             // 
             // pal_Log_Box
             // 
+            this.pal_Log_Box.Controls.Add(this.pal_Log_Line);
             this.pal_Log_Box.Controls.Add(this.flp_G);
-            this.pal_Log_Box.Controls.Add(this.label1);
-            this.pal_Log_Box.Controls.Add(this.label4);
+            this.pal_Log_Box.Controls.Add(this.lbl_Log_TranLog);
+            this.pal_Log_Box.Controls.Add(this.lbl_Log_AppLog);
             this.pal_Log_Box.Location = new System.Drawing.Point(48, 91);
             this.pal_Log_Box.Name = "pal_Log_Box";
-            this.pal_Log_Box.Size = new System.Drawing.Size(517, 26);
+            this.pal_Log_Box.Size = new System.Drawing.Size(517, 336);
             this.pal_Log_Box.TabIndex = 8;
             this.pal_Log_Box.Visible = false;
+            // 
+            // pal_Log_Line
+            // 
+            this.pal_Log_Line.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(144)))), ((int)(((byte)(255)))));
+            this.pal_Log_Line.Location = new System.Drawing.Point(110, 31);
+            this.pal_Log_Line.Margin = new System.Windows.Forms.Padding(0);
+            this.pal_Log_Line.Name = "pal_Log_Line";
+            this.pal_Log_Line.Size = new System.Drawing.Size(81, 3);
+            this.pal_Log_Line.TabIndex = 8;
             // 
             // flp_G
             // 
@@ -497,14 +523,14 @@
             this.FileName,
             this.FullNameV,
             this.FullName});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("黑体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Log.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("黑体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Log.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Log.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.dgv_Log.Location = new System.Drawing.Point(1, 1);
             this.dgv_Log.Margin = new System.Windows.Forms.Padding(1, 1, 0, 0);
@@ -514,6 +540,7 @@
             this.dgv_Log.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Log.Size = new System.Drawing.Size(480, 325);
             this.dgv_Log.TabIndex = 6;
+            this.dgv_Log.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Log_CellContentClick);
             // 
             // RowsC
             // 
@@ -546,33 +573,35 @@
             this.FullName.Name = "FullName";
             this.FullName.Visible = false;
             // 
-            // label1
+            // lbl_Log_TranLog
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label1.Font = new System.Drawing.Font("黑体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.label1.Location = new System.Drawing.Point(290, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 15);
-            this.label1.TabIndex = 5;
-            this.label1.Tag = "1";
-            this.label1.Text = "交易日志";
+            this.lbl_Log_TranLog.AutoSize = true;
+            this.lbl_Log_TranLog.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Log_TranLog.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_Log_TranLog.Font = new System.Drawing.Font("黑体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_Log_TranLog.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.lbl_Log_TranLog.Location = new System.Drawing.Point(290, 11);
+            this.lbl_Log_TranLog.Name = "lbl_Log_TranLog";
+            this.lbl_Log_TranLog.Size = new System.Drawing.Size(71, 15);
+            this.lbl_Log_TranLog.TabIndex = 5;
+            this.lbl_Log_TranLog.Tag = "2";
+            this.lbl_Log_TranLog.Text = "交易日志";
+            this.lbl_Log_TranLog.Click += new System.EventHandler(this.lbl_LogSwitch_Click);
             // 
-            // label4
+            // lbl_Log_AppLog
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label4.Font = new System.Drawing.Font("黑体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.label4.Location = new System.Drawing.Point(117, 11);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 15);
-            this.label4.TabIndex = 4;
-            this.label4.Tag = "1";
-            this.label4.Text = "应用日志";
+            this.lbl_Log_AppLog.AutoSize = true;
+            this.lbl_Log_AppLog.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Log_AppLog.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_Log_AppLog.Font = new System.Drawing.Font("黑体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_Log_AppLog.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(144)))), ((int)(((byte)(255)))));
+            this.lbl_Log_AppLog.Location = new System.Drawing.Point(117, 11);
+            this.lbl_Log_AppLog.Name = "lbl_Log_AppLog";
+            this.lbl_Log_AppLog.Size = new System.Drawing.Size(71, 15);
+            this.lbl_Log_AppLog.TabIndex = 4;
+            this.lbl_Log_AppLog.Tag = "1";
+            this.lbl_Log_AppLog.Text = "应用日志";
+            this.lbl_Log_AppLog.Click += new System.EventHandler(this.lbl_LogSwitch_Click);
             // 
             // pal_Print_Box
             // 
@@ -675,20 +704,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "l";
             // 
-            // lbl_About
-            // 
-            this.lbl_About.AutoSize = true;
-            this.lbl_About.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_About.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbl_About.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_About.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.lbl_About.Location = new System.Drawing.Point(247, 22);
-            this.lbl_About.Name = "lbl_About";
-            this.lbl_About.Size = new System.Drawing.Size(16, 24);
-            this.lbl_About.TabIndex = 9;
-            this.lbl_About.Tag = "0";
-            this.lbl_About.Text = ".";
-            // 
             // SystemManagerFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -772,8 +787,8 @@
         private System.Windows.Forms.Label lbl_Print_IsPrint;
         private System.Windows.Forms.PictureBox ptb_Print_Set;
         private System.Windows.Forms.Panel pal_Log_Box;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_Log_AppLog;
+        private System.Windows.Forms.Label lbl_Log_TranLog;
         private System.Windows.Forms.DataGridView dgv_Log;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowsC;
         private System.Windows.Forms.DataGridViewTextBoxColumn FileName;
@@ -795,5 +810,6 @@
         private System.Windows.Forms.Panel pal_Hotkey_Cash;
         private System.Windows.Forms.TextBox tb_Hotkey_Cash;
         private System.Windows.Forms.Label lbl_About;
+        private System.Windows.Forms.Panel pal_Log_Line;
     }
 }

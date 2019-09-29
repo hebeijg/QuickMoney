@@ -1,15 +1,15 @@
-﻿using QuickMonery.Common;
-using QuickMonery.CustomControl;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Drawing.Printing;
+﻿using System;
 using System.IO;
+using System.Data;
 using System.Linq;
 using System.Text;
+using System.Drawing;
+using QuickMonery.Common;
 using System.Windows.Forms;
+using System.ComponentModel;
+using System.Drawing.Printing;
+using QuickMonery.CustomControl;
+using System.Collections.Generic;
 
 namespace QuickMonery
 {
@@ -39,13 +39,27 @@ namespace QuickMonery
             {
                 File.Create(SysConfigPath).Close();
             }
-            iniClass = new IniFile(SysConfigPath);
-
-            string tmp_PrintJointEnum = iniClass.IniReadValue("Print", "JointEnum");
+            Init();
             InitPrint();
         }
 
+        /// <summary>
+        /// 初始化
+        /// </summary>
+        private void Init()
+        {
+            iniClass = new IniFile(SysConfigPath);
+            pal_Print_Box.Height = 380;
+            lbl_About.Location = new Point(70, 75);
+            pal_Log_Box.Location = new Point(48, 67);
+            pal_Log_Box.Height = 382;
+            MainStyle();
+            pal_Hotkey_Box.Location = new Point(48,67);
+            pal_Hotkey_Box.Height = 200;
+        }
+
         #region 菜单切换
+        //点击事件
         private void lblSwitchMenu_Click(object sender, EventArgs e)
         {
             Label tmp_obj = (Label)sender;
@@ -106,7 +120,6 @@ namespace QuickMonery
         #region 打 印 机
         private void InitPrint()
         {
-            pal_Print_Box.Height = 380;
             //加载打印名称
             if (ddlPrintName == null)
             {
@@ -169,12 +182,13 @@ namespace QuickMonery
         #endregion
 
         #region 日志管理
-        private void InitLog()
+        private void InitLog(int LogType=1)
         {
-            pal_Log_Box.Location = new Point(48, 67);
-            pal_Log_Box.Height = 500;
-            MainStyle();
-            string logPath = Application.StartupPath + "\\Log";
+            string logPath = Application.StartupPath;
+            if (LogType == 1)
+                logPath += "\\Log";
+            else
+                logPath += "\\Log\\Transaction";
             if (Directory.Exists(logPath))
             {
                 DirectoryInfo dir = new DirectoryInfo(logPath);
@@ -192,10 +206,51 @@ namespace QuickMonery
             }
         }
 
+        //切换
+        private void lbl_LogSwitch_Click(object sender, EventArgs e)
+        {
+            Label tmp_obj = (Label)sender;
+            int tmp_LogType = int.Parse(tmp_obj.Tag.ToString());
+            tmp_obj.ForeColor = System.Drawing.Color.FromArgb(80, 144, 255);
+            if (tmp_LogType == 1)
+            {
+                lbl_Log_TranLog.ForeColor = System.Drawing.Color.FromArgb(102, 102, 102);
+                pal_Log_Line.Location = new Point(110, 31);
+                InitLog();
+            }
+            else
+            {
+                lbl_Log_AppLog.ForeColor = System.Drawing.Color.FromArgb(102, 102, 102);
+                pal_Log_Line.Location = new Point(285, 31);
+                InitLog(tmp_LogType);
+            }
+        }
+
+        //详细
+        private void dgv_Log_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex > -1)
+                {
+                    string IndexValue = dgv_Log.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                    string FullName = dgv_Log.Rows[e.RowIndex].Cells["FullName"].Value.ToString();
+                    if (IndexValue == "详细")
+                    {
+                        System.Diagnostics.Process.Start("notepad.exe", FullName);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         public void MainStyle()
         {
             flp_G.BorderStyle = BorderStyle.None;
-            flp_G.BackColor = System.Drawing.Color.FromArgb(231, 231, 231); ;
+            flp_G.BackColor = System.Drawing.Color.FromArgb(231, 231, 231);
             #region DataGridVeiw Style
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -231,15 +286,12 @@ namespace QuickMonery
             this.dgv_Log.RowTemplate.Height = 30;
 
             #endregion
-
         }
         #endregion
 
         #region 快 捷 键
         private void InitHotkey()
         {
-            pal_Hotkey_Box.Location = new Point(48,67);
-            pal_Hotkey_Box.Height = 200;
             string tmp_Hotkey_Sow = iniClass.IniReadValue("Hotkey", "ShowOrHidden");
             string tmp_Hotkey_Cash = iniClass.IniReadValue("Hotkey", "Cash");
             string tmp_Hotkey_Report = iniClass.IniReadValue("Hotkey", "Report");
@@ -387,16 +439,20 @@ namespace QuickMonery
         }
         #endregion
 
-        //关于
+        /// <summary>
+        /// 关于
+        /// </summary>
         private void InitAbout()
         {
-            lbl_About.Text = iniClass.IniReadValue("VersionInfo", "Version");
-            lbl_About.Location = new Point(55, 75);
+            lbl_About.Text = "V" + iniClass.IniReadValue("VersionInfo", "Version");
         }
 
-        //退出设置
+        /// <summary>
+        /// 退出设置
+        /// </summary>
         private void lblExitSettings_Click(object sender, EventArgs e)
         {
+            _frm.sysStatus = false;
             this.Close();
         }
     }
